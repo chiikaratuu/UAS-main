@@ -1,0 +1,345 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  scroll-padding-top: 2rem;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --main-color: #01277f;
+  --text-color: #2f2f2f;
+  --bg-color: #fff;
+
+  --big-font: 3.2rem;
+  --h2-font: 2rem;
+}
+section {
+  padding: 50px 10%;
+}
+body {
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff4f3;
+  padding: 18px 10%;
+}
+.logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+.navbar {
+  display: flex;
+}
+.navbar a {
+  font-size: 1rem;
+  padding: 10px 20px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+.navbar a:hover {
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 2rem;
+}
+#menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  background: #63d75c;
+  gap: 1.5rem;
+}
+.home-img Img {
+  width: 100%;
+}
+.home-text h1 {
+  font-size: var(--big-font);
+}
+.btn {
+  background: var(--main-color);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 2rem;
+  color: #fff;
+}
+.btn:hover {
+  background: #fc5552;
+}
+.heading {
+  text-align: center;
+}
+.heading p {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--main-color);
+}
+.heading h2 {
+  font-size: var(--h2-font);
+}
+.contact-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  position: inherit;
+  align-items: center;
+  
+}
+.contact-form form input,
+textarea {
+  width: 325px;
+  padding: 14px;
+  margin-bottom: 10px;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  background: #291817;
+}
+.contact-form form textarea {
+  resize: none;
+  height: 200px;
+}
+.contact-form form .contact-button {
+  font-weight: 500;
+  color: #fff;
+  background: var(--main-color);
+  cursor: pointer;
+}
+.contact-form form .contact-button:hover {
+  background: #1845ad;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social a {
+  font-size: 27px;
+  margin: 0.5rem;
+}
+.social a .bx {
+  padding: 5px;
+  color: #fff;
+  background: #161616;
+  border-radius: 50%;
+}
+.social a .bx:hover {
+  background: var(--main-color);
+}
+.links {
+  margin: 1rem 0 1rem;
+}
+.links a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--second-color);
+  padding: 1rem;
+}
+.links a:hover {
+  color: var(--main-color);
+}
+.contact p {
+  text-align: center;
+}
+
+.copyright {
+  padding: 20px;
+  text-align: center;
+}
+/* Making Responsive */
+@media (max-width: 991px) {
+  header {
+    padding: 10px 4%;
+  }
+  section {
+    padding: 50px 4%;
+  }
+  :root {
+    --big-font: 2.7rem;
+    --h2-font: 1.7rem;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --big-font: 2rem;
+    --h2-font: 1.4rem;
+  }
+  #menu-icon {
+    display: initial;
+    color: var(--text-color);
+  }
+  header .enavbar {
+    position: absolute;
+    top: -400px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #fff4f3;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+    transition: 0.5s;
+  }
+  .navbar.active {
+    top: 100%;
+  }
+  .navbar a {
+    padding: 1.5rem;
+    display: block;
+  }
+  .navbar a:hover {
+    color: var(--main-color);
+    background: none;
+  }
+  .home {
+    grid-template-columns: 1fr;
+  }
+  .home-text {
+    padding-top: 2rem;
+  }
+}
+@media (max-width: 415px) {
+  .contact-form form input,
+  textarea {
+    width: auto;
+  }
+}
+
+body {
+  background-color: rgb(205, 255, 125);
+}
+.background {
+  width: 430px;
+  height: 480px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.background .shape {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.shape:first-child {
+  background: linear-gradient(#1845ad, #23a2f6);
+  left: -80px;
+  top: -80%;
+}
+
+.shape:last-child {
+  background: linear-gradient(to right, #ff512f, #098219);
+  right: -30px;
+  bottom: -80px;
+}
+form {
+  height: 520px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.13);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+}
+form {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+form h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+::placeholder {
+  color: #e5e5e5;
+}
+button {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #fff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.social {
+  margin-top: 30px;
+  display: flex;
+}
+.social div {
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255, 255, 255, 0.27);
+  color: #eaf0fb;
+  text-align: center;
+}
+.social div:hover {
+  background-color: rgba(255, 255, 255, 0.47);
+}
+.social .fb {
+  margin-left: 25px;
+}
+.social i {
+  margin-right: 4px;
+}
